@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<f:view contentType="text/html">
+	<h:head>
+		<title>RedScrystal</title>
+		<f:facet name="first">
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+			<meta http-equiv="pragma" content="no-cache" />
+			<meta http-equiv="cache-control" content="no-cache" />
+			<meta http-equiv="expires" content="0" />
+		</f:facet>
+		<link rel="SHORTCUT ICON" href="#{request.contextPath}/favicon.ico" />
+		<h:outputStylesheet library="css" name="style.css" />
+	</h:head>
+	<h:body>
+		<!-- Enable ajaxErrorHandler -->
+
+		<pe:ajaxErrorHandler button="Close warning!">
+			<f:facet name="title">  
+       				 Error <span style="color: red;">{error-name}</span>
+			</f:facet>
+			<f:facet name="body">
+				<div>
+					<h:form>
+						<p:tabView>
+							<p:tab title="Message">
+								<h:panelGrid columns="2">
+									<h:outputLabel value="Error message:" />
+									<h:outputText value="{error-message}"
+										style="font-size: 1.2em;color:navy;" />
+
+									<h:outputLabel value="Server name:" />
+									<h:outputText value="{error-hostname}"
+										style="font-size: 1.2em;color:navy;" />
+								</h:panelGrid>
+
+							</p:tab>
+							<p:tab title="Detail">
+								<div style="overflow: auto; height: 300px; width: 700px;">
+									{error-stacktrace}</div>
+							</p:tab>
+						</p:tabView>
+					</h:form>
+				</div>
+			</f:facet>
+		</pe:ajaxErrorHandler>
+
+		<pe:ajaxErrorHandler
+			type="javax.faces.application.ViewExpiredException" button="Reload"
+			buttonOnclick="document.location.href=document.location.href;" />
+
+		<pe:ajaxErrorHandler type="javax.servlet.ServletException"
+			button="Reload"
+			buttonOnclick="document.location.href=document.location.href;" />
+		<script type="text/javascript">
+
+</script>
+
+		<h:form id="loginForm" prependId="false">
+			<style>
+.center {
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	z-index: 15;
+	top: 50%;
+	left: 50%;
+	margin: -250px 0 0 -250px;
+	background-color: white;
+}
+
+.ui-widget-content {
+	background-color: white;
+	background-image: none;
+}
+
+.ui-panel-content {
+	background-color: white;
+	background-image: none;
+}
+</style>
+
+			<p:panel widgetVar="loginPanelWidget" styleClass="center">
+				<f:facet name="header">
+					<h:outputText value="Sign in" style="font-size:16px;" />
+				</f:facet>
+				<p:messages showDetail="false"></p:messages>
+				<h:panelGrid columns="1">
+					<h:panelGroup>
+						<h:outputText value="User name" />
+						<br />
+						<br />
+						<p:inputText value="#{loginController.username}" required="true"
+							requiredMessage="User name is empty!"></p:inputText>
+					</h:panelGroup>
+					<p:spacer height="1"></p:spacer>
+					<h:panelGroup>
+						<h:outputText value="Password" />
+						<br />
+						<br />
+						<p:password value="#{loginController.password}" required="true"
+							requiredMessage="Password is empty!"></p:password>
+					</h:panelGroup>
+				</h:panelGrid>
+				<f:facet name="footer">
+					<p:commandButton value="Sign In!" process="loginForm" ajax="false"
+						actionListener="#{loginController.signIn}"></p:commandButton>
+
+				</f:facet>
+			</p:panel>
+		</h:form>
+	</h:body>
+</f:view>
+</html>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="primefaces-3.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/primefaces-3.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/primefaces-extensions-0.7.0-20130504.042000-69.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/primefaces-mobile-1.0.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

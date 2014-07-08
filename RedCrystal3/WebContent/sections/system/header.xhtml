@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition>
+	<h:graphicImage library="images" name="logo.jpg" styleClass="logo"
+		title="PrimeFaces Extensions" />
+
+	<h:panelGrid columns="7" styleClass="smallNav"
+		columnClasses="smallNavText,smallNavImg,smallNavText">
+		<h:outputLink value="#{request.contextPath}/views/home.jsf" hreflang="">
+			<h:outputText value="Homepage" />
+		</h:outputLink>
+		<h:outputText value="|" />
+		<h:outputLink value="#" onclick="dlgDevelopers.show()">
+			<h:outputText value="Developers" />
+		</h:outputLink>
+	</h:panelGrid>
+
+	<p:ajaxStatus styleClass="logo"
+		style="left:80px; width:32px; height:32px; margin-top: 10px;">
+		<f:facet name="start">
+			<h:graphicImage library="images" name="ajax_loader_blue_32.gif"
+				alt="AJAX Status" />
+		</f:facet>
+		<f:facet name="complete">
+			<h:outputText value="" />
+		</f:facet>
+	</p:ajaxStatus>
+</ui:composition>
+</html>

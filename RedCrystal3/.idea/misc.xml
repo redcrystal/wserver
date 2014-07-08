@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/batch-listeners" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/batchlet-simple" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-checkpoint" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-csv-database" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-exception" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-mapper" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-optional-processor" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-partition" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-simple" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-simple-nobeans" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/decision" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/flow" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/multiple-steps" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/batch/split" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/bean-discovery-all" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/bean-discovery-annotated" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/bean-discovery-none" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/beanmanager" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/beansxml-noversion" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/built-in" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/decorators" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/exclude-filter" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/extension" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/interceptors" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/nobeans-el-injection" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/nobeans-el-injection-flowscoped" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/nobeans-xml" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/pkg-level" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/scopes" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/vetoed" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/concurrency/dynamicproxy" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/concurrency/managedexecutor" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/concurrency/managedscheduledexecutor" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/concurrency/managedthreadfactory" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/async-ejb" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/embeddable" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/lifecycle" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/singleton" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/stateful" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/stateless" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/timer" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/el/standalone" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/basic-authentication" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/ejb-propagation" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/lifecycle" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/register-session" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/wrapping" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/javamail/definition" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/angularjs" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/async-client" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/async-server" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/beanvalidation" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/client-negotiation" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/dynamicfilter" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/filter" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/filter-interceptor" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/interceptor" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/invocation" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/invocation-async" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/jaxrs-client" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/jaxrs-endpoint" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/jaxrs-security-declarative" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/jsonp" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/link" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/mapping-exceptions" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/readerwriter" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/readerwriter-injection" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/readerwriter-json" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/request-binding" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/resource-validation" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/server-negotiation" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/singleton" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jms/jms-xa" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jms/send-receive" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jms/temp-destination" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/criteria" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/entitygraph" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/extended-pc" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/jndi-context" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/jpa-converter" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/listeners" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/locking-optimistic" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/locking-pessimistic" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/multiple-pu" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/native-sql" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/native-sql-resultset-mapping" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/pu-typesafe" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/schema-gen-index" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/schema-gen-metadata" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/schema-gen-scripts" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/schema-gen-scripts-external" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/schema-gen-scripts-generate" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/storedprocedure" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/unsynchronized-pc" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/ajax" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/bean-validation" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/components" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/composite-component" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/contracts" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/contracts-library" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/file-upload" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/flows-declarative" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/flows-mixed" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/flows-programmatic" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/flows-simple" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/http-get" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/passthrough" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/radio-buttons" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/resource-handling" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/server-extension" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/simple-facelet" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/viewscoped" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/json/object-builder" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/json/object-reader" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/json/streaming-generate" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/json/streaming-parser" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jta/transactional" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jta/tx-exception" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/jta/user-transaction" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/async-servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/cookies" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/error-mapping" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/event-listeners" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/file-upload" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/metadata-complete" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/nonblocking" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/protocol-handler" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/resource-packaging" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/security-basicauth" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/security-basicauth-omission" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/security-deny-uncovered" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/security-form-based" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/security-programmatic" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/servlet-filters" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/web-fragment" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/validation/custom-constraint" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/validation/methods" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/chat" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/encoder" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/encoder-client" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/encoder-programmatic" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-async" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-config" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-javatypes" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-programmatic" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-programmatic-async" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-programmatic-config" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-programmatic-injection" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-security" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-singleton" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/httpsession" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/injection" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/messagesize" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/parameters" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/properties" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/subprotocol" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-client" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-client-config" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-client-programmatic" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-client-programmatic-config" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-client-programmatic-encoders" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-vs-rest" />
+    <file type="web" url="file://$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/whiteboard" />
+  </component>
+  <component name="IdProvider" IDEtalkID="8D8F03BE9B7694E610DC1CECCEC6596E" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/batch-listeners/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/batchlet-simple/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-checkpoint/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-csv-database/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-exception/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-mapper/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-optional-processor/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-partition/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-simple-nobeans/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/chunk-simple/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/decision/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/flow/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/multiple-steps/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/batch/split/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/alternatives/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/bean-discovery-all/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/bean-discovery-annotated/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/bean-discovery-none/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/beanmanager/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/beansxml-noversion/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/built-in/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/decorators/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/exclude-filter/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/extension/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/interceptors/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/nobeans-el-injection-flowscoped/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/nobeans-el-injection/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/nobeans-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/pkg-level/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/scopes/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/cdi/vetoed/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/concurrency/dynamicproxy/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/concurrency/managedexecutor/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/concurrency/managedscheduledexecutor/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/concurrency/managedthreadfactory/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/concurrency/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/async-ejb/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/embeddable/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/lifecycle/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/singleton/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/stateful/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/stateless/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/ejb/timer/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/el/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/el/standalone/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/basic-authentication/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/common/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/ejb-propagation/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/lifecycle/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/register-session/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaspic/wrapping/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/javamail/definition/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/javamail/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/angularjs/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/async-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/async-server/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/beanvalidation/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/client-negotiation/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/dynamicfilter/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/filter-interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/filter/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/invocation-async/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/invocation/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/jaxrs-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/jaxrs-endpoint/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/jaxrs-security-declarative/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/jsonp/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/link/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/mapping-exceptions/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/readerwriter-injection/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/readerwriter-json/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/readerwriter/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/request-binding/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/resource-validation/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/server-negotiation/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jaxrs/singleton/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jca/connector-simple/connector/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jca/connector-simple/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jca/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jms/jms-xa/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jms/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jms/send-receive/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jms/temp-destination/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/criteria/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/datasourcedefinition/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/entitygraph/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/extended-pc/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/jndi-context/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/jpa-converter/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/listeners/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/locking-optimistic/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/locking-pessimistic/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/multiple-pu/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/native-sql-resultset-mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/native-sql/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/pu-typesafe/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/schema-gen-index/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/schema-gen-metadata/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/schema-gen-scripts-external/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/schema-gen-scripts-generate/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/schema-gen-scripts/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/storedprocedure/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jpa/unsynchronized-pc/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/ajax/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/bean-validation/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/components/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/composite-component/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/contracts-library-impl/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/contracts-library/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/contracts/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/file-upload/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/flows-declarative/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/flows-mixed/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/flows-programmatic/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/flows-simple/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/http-get/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/passthrough/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/radio-buttons/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/resource-handling/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/server-extension/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/simple-facelet/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jsf/viewscoped/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/json/object-builder/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/json/object-reader/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/json/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/json/streaming-generate/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/json/streaming-parser/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jta/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jta/transactional/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jta/tx-exception/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/jta/user-transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/async-servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/cookies/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/error-mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/event-listeners/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/file-upload/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/metadata-complete/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/nonblocking/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/protocol-handler/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/resource-packaging/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/security-basicauth-omission/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/security-basicauth/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/security-deny-uncovered/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/security-form-based/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/security-programmatic/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/servlet-filters/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/servlet/web-fragment/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/util/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/validation/custom-constraint/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/validation/methods/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/validation/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/chat/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/encoder-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/encoder-programmatic/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/encoder/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-async/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-config/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-javatypes/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-programmatic-async/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-programmatic-config/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-programmatic-injection/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-programmatic/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-security/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint-singleton/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/endpoint/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/httpsession/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/injection/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/javase-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/messagesize/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/parameters/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/properties/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/subprotocol/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-client-config/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-client-programmatic-config/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-client-programmatic-encoders/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-client-programmatic/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/websocket-vs-rest/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../sample/javaee7-samples/websocket/whiteboard/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
+

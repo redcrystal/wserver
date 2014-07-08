@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:body>
+	<ui:composition template="/templates/template.xhtml">
+
+		<ui:define name="mainContent">
+			<h:form id="mainForm">
+
+				<p:growl id="growl" showDetail="true" />
+                <p:panel id="ardunioPanel">
+                    <f:facet name="header">
+                        <h:outputText value="Arduino" styleClass="headerFont" />
+                    </f:facet>
+                    <h:panelGrid columns="2">
+                        <h:outputText value="Tx = " />
+                        <p:inputTextarea rows="5" cols="80" value="#{uartController.tx}"
+                                         id="txdata"></p:inputTextarea>
+                        <p:spacer height="10"></p:spacer>
+                        <p:spacer height="10"></p:spacer>
+                        <h:outputText value="Rx = " />
+                        <h:outputText value="#{uartController.rx}" id="rxdata" />
+                    </h:panelGrid>
+
+                    <f:facet name="footer">
+                        <p:commandButton value="Send" update="ardunioPanel"
+                                         action="#{uartController.transferToUart}"></p:commandButton>
+                        <p:commandButton value="Demo"></p:commandButton>
+					</f:facet>
+				</p:panel>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

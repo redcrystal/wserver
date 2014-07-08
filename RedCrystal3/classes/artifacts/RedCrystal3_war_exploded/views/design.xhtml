@@ -1,0 +1,281 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<ui:composition template="/templates/template.xhtml">
+	<ui:define name="mainContent">
+		<h:form id="mainForm">
+
+            <style type="text/css">
+                .col1 {
+                    width: 70%;
+                    vertical-align: top;
+                }
+
+                .col2 {
+                    vertical-align: top;
+                }
+
+                .headerFont {
+                    font-size: 15px;
+                }
+
+                .ui-data-grid-component td {
+                    width: 110px;
+                }
+
+                .ui-data-grid-selectedComponents td {
+                    width: 188px;
+                }
+
+                .ui-widget-content {
+                    background-color: white;
+                    background-image: none;
+                }
+
+                .ui-panel-content {
+                    background-color: white;
+                    background-image: none;
+                }
+            </style>
+
+            <p:growl id="growl" showDetail="true" />
+            <h:panelGrid columns="2" cellpadding="0" columnClasses="col1,col2"
+                cellspacing="10" style="width:100%;">
+                <p:panel style="background-color:white;padding:0px 0px 10px 0px;">
+                    <f:facet name="header">
+                        <h:outputText value="Components" styleClass="headerFont" />
+                    </f:facet>
+
+                    <div style="width: 100%; max-height: 190px; overflow: auto;">
+                        <p:dataGrid var="aElement" columns="8"
+                            style="background-color:white;"
+                            styleClass="ui-data-grid-component"
+                            value="#{hardwareDesignController.availableComponents}">
+                            <p:column>
+                                <p:graphicImage id="aElementId" title="#{aElement.id}"
+                                    value="/resources/images/components/#{aElement.image}"
+                                    width="80" height="80" styleClass="aElementImage">
+                                </p:graphicImage>
+                                <p:draggable for="aElementId" revert="true" helper="clone"
+                                    stack=".aElementImage">
+                                </p:draggable>
+                            </p:column>
+                        </p:dataGrid>
+                    </div>
+
+                    <div>
+                        <p:spacer height="10"></p:spacer>
+                    </div>
+                    <h:panelGroup id="selectedComponents" layout="block"
+                        styleClass="ui-widget-content" style="width:100%px; padding:1px;">
+                        <p class="ui-widget-header" style="margin: 0; padding: 5px;">
+                            <h:outputText value="Your Design" styleClass="headerFont" />
+                        </p>
+                        <h:panelGroup layout="block" style="padding:10px;"
+                            rendered="#{empty hardwareDesignController.selectedComponents}">
+                            <h:outputText
+                                value="Please drag and drop any available component!" />
+                        </h:panelGroup>
+                        <p:dataGrid rowIndexVar="rowIndex" columns="4"
+                            styleClass="ui-data-grid-selectedComponents"
+                            rendered="#{not empty hardwareDesignController.selectedComponents}"
+                            value="#{hardwareDesignController.selectedComponents}"
+                            var="aElement">
+                            <p:column>
+                                <p:commandLink value="#{rowIndex+1}. #{aElement.name} (#{aElement.address})"
+                                    update=":mainForm:componentProperties" process="@this"
+                                    style="fon-size:16px;font-weight:bold;"
+                                    action="#{hardwareDesignController.onComponentSelect}">
+                                    <f:setPropertyActionListener
+                                        target="#{hardwareDesignController.selectedComponent}"
+                                        value="#{aElement}" />
+                                </p:commandLink>
+                                <p:graphicImage title="#{aElement.index}"
+                                    id="selectedComponentItem"
+                                    value="/resources/images/components/#{aElement.image}"
+                                    width="165" height="165" styleClass="aElementImage">
+                                </p:graphicImage>
+                            </p:column>
+                        </p:dataGrid>
+                        <p:droppable id="componentDrop" for="selectedComponents"
+                            onDrop="handleDrop" tolerance="touch"
+                            activeStyleClass="ui-state-default"
+                            hoverStyleClass="ui-state-hover">
+                        </p:droppable>
+                    </h:panelGroup>
+
+                </p:panel>
+
+
+                <p:panel id="componentProperties"
+                    style="width:100%;padding:0px 0px 10px 0px;">
+                    <f:facet name="header">
+                        <h:outputText value="Component Properties" styleClass="headerFont" />
+                    </f:facet>
+
+                    <h:panelGroup layout="block" style="padding:10px;"
+                        rendered="#{empty hardwareDesignController.selectedComponent}">
+                        <h:outputText
+                            value="Please click on a componet name in your design to select!" />
+                    </h:panelGroup>
+
+                    <h:panelGroup id="devicePanel"
+                        rendered="#{not empty hardwareDesignController.selectedComponent}">
+                        <h:panelGrid columns="3" style="width:100%;">
+                            <h:outputText value="Name: " style="font-weight:bold;" />
+                            <h:outputText style="font-weight:bold;"
+                                value="#{hardwareDesignController.selectedComponent.name}" />
+                            <span></span>
+
+                            <h:outputText value="Id: " />
+                            <h:outputText
+                                value="#{hardwareDesignController.selectedComponent.id}" />
+                            <span></span>
+
+                            <h:outputText value="Address: " />
+                            <h:outputText
+                                value="#{hardwareDesignController.selectedComponent.address}" />
+                            <span></span>
+
+                            <h:outputText value="Description: " />
+                            <h:outputText
+                                value="#{hardwareDesignController.selectedComponent.description}" />
+                            <span></span>
+                            <p:spacer height="5"></p:spacer>
+                            <p:spacer height="5"></p:spacer>
+                            <p:spacer height="5"></p:spacer>
+                        </h:panelGrid>
+
+                        <h:outputText value="Properties:"
+                            style="font-weight:bold; font-size:13px;" />
+
+                        <p:separator></p:separator>
+
+                        <p:messages id="messages" showSummary="true" />
+                        <pe:importConstants className="de.redcrystal.webapp.Constants"
+                            var="Constants"></pe:importConstants>
+                        <pe:dynaForm id="dynaForm" var="data"
+                            value="#{hardwareDesignController.dynaForm}">
+                            <pe:dynaFormControl styleClass="pe-dynaform-label">
+                                <h:outputText value="#{data}" />
+                            </pe:dynaFormControl>
+                            <pe:dynaFormControl type="int" for="int">
+                                <p:inputText id="int" value="#{data.value}"
+                                    required="#{data.required}" />
+                                <pe:keyFilter for="int" mask="int" />
+                            </pe:dynaFormControl>
+
+                            <pe:dynaFormControl type="number" for="number">
+                                <p:inputText id="number" value="#{data.value}"
+                                    required="#{data.required}" />
+                                <pe:keyFilter for="number" mask="num" />
+                            </pe:dynaFormControl>
+
+                            <pe:dynaFormControl type="boolean" for="boolean">
+                                <p:selectBooleanCheckbox id="boolean" value="#{data.value}"
+                                    required="#{data.required}"></p:selectBooleanCheckbox>
+                            </pe:dynaFormControl>
+
+                            <pe:dynaFormControl type="string" for="string">
+                                <p:inputText id="string" value="#{data.value}"
+                                    required="#{data.required}"></p:inputText>
+                            </pe:dynaFormControl>
+
+                            <pe:dynaFormControl type="date" for="date">
+                                <p:calendar id="date" value="#{data.value}"
+                                    pattern="#{Constants.DATE_FORMAT}" showOn="button"
+                                    required="#{data.required}"></p:calendar>
+                            </pe:dynaFormControl>
+
+                            <pe:dynaFormControl type="datetime" for="datetime">
+                                <p:calendar id="datetime" value="#{data.value}"
+                                    pattern="#{Constants.DATE_TIME_FORMAT}" showOn="button"
+                                    required="#{data.required}"></p:calendar>
+                            </pe:dynaFormControl>
+
+                            <pe:dynaFormControl type="time" for="time">
+                                <pe:timePicker value="#{data.value}" id="time"
+                                    required="#{data.required}"></pe:timePicker>
+                            </pe:dynaFormControl>
+                        </pe:dynaForm>
+                        <h:panelGrid columns="3">
+                            <p:commandButton value="Update" icon="ui-icon-play"
+                                action="#{hardwareDesignController.submitDynaForm}"
+                                update="growl, devicePanel"></p:commandButton>
+                            <p:spacer height="5"></p:spacer>
+                            <p:commandButton value="Remove" icon="ui-icon-circle-close"></p:commandButton>
+                        </h:panelGrid>
+                    </h:panelGroup>
+                </p:panel>
+
+
+            </h:panelGrid>
+
+            <pe:remoteCommand id="addComponentCommand" name="addComponent"
+                process="@this" update="selectedComponents growl"
+                actionListener="#{hardwareDesignController.addComponent}">
+                <pe:assignableParam name="componentId"
+                    assignTo="#{hardwareDesignController.selectedComponentId}" />
+            </pe:remoteCommand>
+
+            <pe:remoteCommand id="updateServoCommand" name="updateServo"
+                              actionListener="#{hardwareDesignController.fastControlServo}">
+                <pe:methodSignature parameters="java.lang.String, java.lang.String" />
+                <pe:methodParam name="ServoID"/>
+                <pe:methodParam name="dutyCycle"/>
+            </pe:remoteCommand>
+
+            <pe:remoteCommand id="updateQuadcopterCommand" name="updateQuadcopter"
+                              actionListener="#{hardwareDesignController.controlQuadcopterCmd}">
+                <pe:methodSignature parameters="java.lang.String, java.lang.String,java.lang.String, java.lang.String" />
+                <pe:methodParam name="dutyCycle0"/>
+                <pe:methodParam name="dutyCycle1"/>
+                <pe:methodParam name="dutyCycle2"/>
+                <pe:methodParam name="dutyCycle3"/>
+            </pe:remoteCommand>
+
+
+
+
+            <script type="text/javascript">
+                function handleDrop(event, ui) {
+                    var componentId = ui.draggable.attr("title");
+                    addComponent(componentId);
+                }
+
+            </script>
+
+            <h:outputStylesheet library="css" name="jquery.nouislider.css"  />
+            <h:outputStylesheet library="css" name="quadcopter.css"  />
+
+            <script type="text/javascript" src="#{request.contextPath}/resources/javascript/three.min.js"/>
+
+            <script type="text/javascript" src="#{request.contextPath}/resources/js/loaders/MTLLoader.js" />
+            <script type="text/javascript" src="#{request.contextPath}/resources/js/loaders/OBJMTLLoader.js" />
+
+            <script type="text/javascript" src="#{request.contextPath}/resources/js/Detector.js" />
+            <script type="text/javascript" src="#{request.contextPath}/resources/js/libs/stats.min.js" />
+            <script type="text/javascript" src="#{request.contextPath}/resources/javascript/jquery.nouislider.js" />
+
+            <script type="text/javascript" src="#{request.contextPath}/resources/javascript/robotarm.js"  />
+            <script type="text/javascript" src="#{request.contextPath}/resources/javascript/quadcopter.js" />
+
+
+            <!--
+            <script type="text/javascript">
+
+                $(document).ready(function(){
+                    init();
+                })
+
+
+            </script>
+            -->
+
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

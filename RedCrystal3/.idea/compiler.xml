@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="jWebSocketServer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ajax" target="1.7" />
+      <module name="alternatives" target="1.7" />
+      <module name="async-client" target="1.7" />
+      <module name="async-ejb" target="1.7" />
+      <module name="async-server" target="1.7" />
+      <module name="async-servlet" target="1.7" />
+      <module name="basic-authentication" target="1.7" />
+      <module name="batch-listeners" target="1.7" />
+      <module name="batch-samples" target="1.7" />
+      <module name="batchlet-simple" target="1.7" />
+      <module name="bean-discovery-all" target="1.7" />
+      <module name="bean-discovery-annotated" target="1.7" />
+      <module name="bean-discovery-none" target="1.7" />
+      <module name="bean-validation" target="1.7" />
+      <module name="beanmanager" target="1.7" />
+      <module name="beansxml-noversion" target="1.7" />
+      <module name="beanvalidation" target="1.7" />
+      <module name="built-in" target="1.7" />
+      <module name="cdi-samples" target="1.7" />
+      <module name="chat" target="1.7" />
+      <module name="chunk-checkpoint" target="1.7" />
+      <module name="chunk-csv-database" target="1.7" />
+      <module name="chunk-exception" target="1.7" />
+      <module name="chunk-mapper" target="1.7" />
+      <module name="chunk-optional-processor" target="1.7" />
+      <module name="chunk-partition" target="1.7" />
+      <module name="chunk-simple" target="1.7" />
+      <module name="chunk-simple-nobeans" target="1.7" />
+      <module name="client-negotiation" target="1.7" />
+      <module name="common" target="1.7" />
+      <module name="components" target="1.7" />
+      <module name="composite-component" target="1.7" />
+      <module name="concurrency-samples" target="1.7" />
+      <module name="connector" target="1.7" />
+      <module name="connector-simple" target="1.7" />
+      <module name="contracts" target="1.7" />
+      <module name="contracts-library" target="1.7" />
+      <module name="contracts-library-impl" target="1.7" />
+      <module name="cookies" target="1.7" />
+      <module name="criteria" target="1.7" />
+      <module name="custom-constraint" target="1.7" />
+      <module name="datasourcedefinition" target="1.7" />
+      <module name="decision" target="1.7" />
+      <module name="decorators" target="1.7" />
+      <module name="definition" target="1.7" />
+      <module name="dynamicfilter" target="1.7" />
+      <module name="dynamicproxy" target="1.7" />
+      <module name="ejb-propagation" target="1.7" />
+      <module name="ejb-samples" target="1.7" />
+      <module name="el-samples" target="1.7" />
+      <module name="embeddable" target="1.7" />
+      <module name="encoder" target="1.7" />
+      <module name="encoder-client" target="1.7" />
+      <module name="encoder-programmatic" target="1.7" />
+      <module name="endpoint" target="1.7" />
+      <module name="endpoint-async" target="1.7" />
+      <module name="endpoint-config" target="1.7" />
+      <module name="endpoint-javatypes" target="1.7" />
+      <module name="endpoint-programmatic" target="1.7" />
+      <module name="endpoint-programmatic-async" target="1.7" />
+      <module name="endpoint-programmatic-config" target="1.7" />
+      <module name="endpoint-programmatic-injection" target="1.7" />
+      <module name="endpoint-security" target="1.7" />
+      <module name="endpoint-singleton" target="1.7" />
+      <module name="entitygraph" target="1.7" />
+      <module name="error-mapping" target="1.7" />
+      <module name="event-listeners" target="1.7" />
+      <module name="exclude-filter" target="1.7" />
+      <module name="extended-pc" target="1.7" />
+      <module name="extension" target="1.7" />
+      <module name="file-upload (1) (org.javaee7.jsf)" target="1.7" />
+      <module name="file-upload (2) (org.javaee7.servlet)" target="1.7" />
+      <module name="filter" target="1.7" />
+      <module name="filter-interceptor" target="1.7" />
+      <module name="flow" target="1.7" />
+      <module name="flows-declarative" target="1.7" />
+      <module name="flows-mixed" target="1.7" />
+      <module name="flows-programmatic" target="1.7" />
+      <module name="flows-simple" target="1.7" />
+      <module name="http-get" target="1.7" />
+      <module name="httpsession" target="1.7" />
+      <module name="injection" target="1.7" />
+      <module name="interceptor" target="1.7" />
+      <module name="interceptors" target="1.7" />
+      <module name="invocation" target="1.7" />
+      <module name="invocation-async" target="1.7" />
+      <module name="jaspic-samples" target="1.7" />
+      <module name="javaee7-samples" target="1.7" />
+      <module name="javamail-samples" target="1.7" />
+      <module name="javase-client" target="1.7" />
+      <module name="jax-rs-angularjs" target="1.7" />
+      <module name="jaxrs-client" target="1.7" />
+      <module name="jaxrs-endpoint" target="1.7" />
+      <module name="jaxrs-samples" target="1.7" />
+      <module name="jaxrs-security-declarative" target="1.7" />
+      <module name="jca-samples" target="1.7" />
+      <module name="jms-samples" target="1.7" />
+      <module name="jms-xa" target="1.7" />
+      <module name="jndi-context" target="1.7" />
+      <module name="jpa-converter" target="1.7" />
+      <module name="jpa-listeners" target="1.7" />
+      <module name="jpa-samples" target="1.7" />
+      <module name="jsf-samples" target="1.7" />
+      <module name="json-samples" target="1.7" />
+      <module name="jsonp" target="1.7" />
+      <module name="jta-samples" target="1.7" />
+      <module name="jWebSocketServer" target="1.6" />
+      <module name="lifecycle (1) (org.javaee7.ejb)" target="1.7" />
+      <module name="lifecycle (2) (org.javaee7.jaspic)" target="1.7" />
+      <module name="link" target="1.7" />
+      <module name="locking-optimistic" target="1.7" />
+      <module name="locking-pessimistic" target="1.7" />
+      <module name="managedexecutor" target="1.7" />
+      <module name="managedscheduledexecutor" target="1.7" />
+      <module name="managedthreadfactory" target="1.7" />
+      <module name="mapping-exceptions" target="1.7" />
+      <module name="messagesize" target="1.7" />
+      <module name="metadata-complete" target="1.7" />
+      <module name="methods" target="1.7" />
+      <module name="multiple-pu" target="1.7" />
+      <module name="multiple-steps" target="1.7" />
+      <module name="native-sql" target="1.7" />
+      <module name="native-sql-resultset-mapping" target="1.7" />
+      <module name="nobeans-el-injection" target="1.7" />
+      <module name="nobeans-el-injection-flowscoped" target="1.7" />
+      <module name="nobeans-xml" target="1.7" />
+      <module name="nonblocking" target="1.7" />
+      <module name="object-builder" target="1.7" />
+      <module name="object-reader" target="1.7" />
+      <module name="parameters" target="1.7" />
+      <module name="passthrough" target="1.7" />
+      <module name="pkg-level" target="1.7" />
+      <module name="properties" target="1.7" />
+      <module name="protocol-handler" target="1.7" />
+      <module name="pu-typesafe" target="1.7" />
+      <module name="radio-buttons" target="1.7" />
+      <module name="readerwriter" target="1.7" />
+      <module name="readerwriter-injection" target="1.7" />
+      <module name="readerwriter-json" target="1.7" />
+      <module name="register-session" target="1.7" />
+      <module name="request-binding" target="1.7" />
+      <module name="resource-handling" target="1.7" />
+      <module name="resource-packaging" target="1.7" />
+      <module name="resource-validation" target="1.7" />
+      <module name="schema-gen-index" target="1.7" />
+      <module name="schema-gen-metadata" target="1.7" />
+      <module name="schema-gen-scripts" target="1.7" />
+      <module name="schema-gen-scripts-external" target="1.7" />
+      <module name="schema-gen-scripts-generate" target="1.7" />
+      <module name="scopes" target="1.7" />
+      <module name="security-basicauth" target="1.7" />
+      <module name="security-basicauth-omission" target="1.7" />
+      <module name="security-deny-uncovered" target="1.7" />
+      <module name="security-form-based" target="1.7" />
+      <module name="security-programmatic" target="1.7" />
+      <module name="send-receive" target="1.7" />
+      <module name="server-extension" target="1.7" />
+      <module name="server-negotiation" target="1.7" />
+      <module name="servlet-filters" target="1.7" />
+      <module name="servlet-samples" target="1.7" />
+      <module name="simple-facelet" target="1.7" />
+      <module name="singleton (1) (org.javaee7.ejb)" target="1.7" />
+      <module name="singleton (2) (org.javaee7.jaxrs)" target="1.7" />
+      <module name="split" target="1.7" />
+      <module name="standalone" target="1.7" />
+      <module name="stateful" target="1.7" />
+      <module name="stateless" target="1.7" />
+      <module name="storedprocedure" target="1.7" />
+      <module name="streaming-generate" target="1.7" />
+      <module name="streaming-parser" target="1.7" />
+      <module name="subprotocol" target="1.7" />
+      <module name="temp-destination" target="1.7" />
+      <module name="timer" target="1.7" />
+      <module name="transactional" target="1.7" />
+      <module name="tx-exception" target="1.7" />
+      <module name="unsynchronized-pc" target="1.7" />
+      <module name="user-transaction" target="1.7" />
+      <module name="util-samples" target="1.7" />
+      <module name="validation-samples" target="1.7" />
+      <module name="vetoed" target="1.7" />
+      <module name="viewscoped" target="1.7" />
+      <module name="web-fragment" target="1.7" />
+      <module name="websocket-client" target="1.7" />
+      <module name="websocket-client-config" target="1.7" />
+      <module name="websocket-client-programmatic" target="1.7" />
+      <module name="websocket-client-programmatic-config" target="1.7" />
+      <module name="websocket-client-programmatic-encoders" target="1.7" />
+      <module name="websocket-samples" target="1.7" />
+      <module name="websocket-vs-rest" target="1.7" />
+      <module name="whiteboard" target="1.7" />
+      <module name="wrapping" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
+

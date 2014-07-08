@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<components>
+		<component id="Sensor">
+			<description>That is an light sensor</description>
+			<address>0x00</address>
+			<image>sensor.jpg</image>
+			<name>Sensor</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property required="true" type="int">Int number
+				</property>
+				<property required="false" type="number">Float number
+				</property>
+				<property required="false" type="string">String</property>
+				<property required="false" type="date">Date</property>
+				<property required="false" type="time">Time</property>
+				<property required="false" type="datetime">Date time
+				</property>
+			</properties>
+		</component>
+		<!-- Virtual motor -->
+		<component id="0x00">
+			<description>Virutal Motor 0</description>
+			<address>0x40</address>
+			<image>sensor.jpg</image>
+			<name>Motor 0</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="0" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+			</properties>
+		</component>
+		<component id="0x01">
+			<description>Virutal Motor 1</description>
+			<address>0x41</address>
+			<image>sensor.jpg</image>
+			<name>Motor 1</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="1" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+			</properties>
+		</component>
+		<component id="0x02">
+			<description>Virutal Motor 2</description>
+			<address>0x42</address>
+			<image>sensor.jpg</image>
+			<name>Motor 2</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="2" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+			</properties>
+		</component>
+		<component id="0x03">
+			<description>Virutal Motor 3</description>
+			<address>0x43</address>
+			<image>sensor.jpg</image>
+			<name>Motor 3</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="3" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+			</properties>
+		</component>
+		
+		
+		<!-- Servo is important to make server know to process this correctly. -->
+		<component id="0x08">
+			<description>Virtual Servo 0</description>
+			<address>0xC0</address>
+			<image>motor.jpg</image>
+			<name>Servo 0</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="8" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+				<property required="true" type="int">Pulse Number</property>
+			</properties>
+		</component>
+		<component id="0x09">
+			<description>Virtual Servo 1</description>
+			<address>0xC1</address>
+			<image>motor.jpg</image>
+			<name>Servo 1</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="9" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+				<property required="true" type="int">Pulse Number</property>
+			</properties>
+		</component>
+		<component id="0x0A">
+			<description>Virutal Servo 2</description>
+			<address>0xC2</address>
+			<image>motor.jpg</image>
+			<name>Servo 2</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="10" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+				<property required="true" type="int">Pulse Number</property>
+			</properties>
+		</component>
+		<component id="0x0B">
+			<description>Virutal Servo 3</description>
+			<address>0xC3</address>
+			<image>motor.jpg</image>
+			<name>Servo 3</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="11" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+				<property required="true" type="int">Pulse Number</property>
+			</properties>
+		</component>
+		<component id="0x0C">
+			<description>Virutal Servo 4</description>
+			<address>0xC4</address>
+			<image>motor.jpg</image>
+			<name>Servo 4</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="12" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+				<property required="true" type="int">Pulse Number</property>
+			</properties>
+		</component>
+		<component id="0x0D">
+			<description>Virutal Servo 5</description>
+			<address>0xC5</address>
+			<image>motor.jpg</image>
+			<name>Servo 5</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="13" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+				<property required="true" type="int">Pulse Number</property>
+			</properties>
+		</component>
+		<component id="0x0E">
+			<description>Virutal Servo 6</description>
+			<address>0xC6</address>
+			<image>motor.jpg</image>
+			<name>Servo 6</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="14" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+				<property required="true" type="int">Pulse Number</property>
+			</properties>
+		</component>
+		<component id="0x0F">
+			<description>Virutal Servo 7</description>
+			<address>0xC7</address>
+			<image>motor.jpg</image>
+			<name>Servo 7</name>
+			<properties>
+				<property required="true" type="boolean">On/Off</property>
+				<property defaultValue="15" required="true" type="int">IO</property>
+				<property required="true" type="number">Period</property>
+				<property required="true" type="number">Duty Cycle</property>
+				<property required="true" type="int">Pulse Number</property>
+			</properties>
+		</component>
+			
+		<component id="RobotArm">
+			<description>RobotArm</description>
+			<address>0x00</address>
+			<image>robotarm.png</image>
+			<name>RobotArm</name>
+			<properties>
+				<property required="true" type="number">Servo 0</property>
+				<property required="true" type="number">Servo 1</property>
+				<property required="true" type="number">Servo 2</property>
+				<property required="true" type="number">Servo 3</property>
+                <property required="true" type="number">Servo 4</property>
+                <property required="true" type="number">Servo 5</property>
+			</properties>
+		</component>
+	
+		<component id="Quadcopter">
+			<description>Quadcopter</description>
+			<address>0x00</address>
+			<image>parallax-elev-8-quadcopter-uav-B.jpg</image>
+			<name>Quadcopter</name>
+			<properties>
+				<property required="true" type="number">Duty Cycle 0</property>
+				<property required="true" type="number">Duty Cycle 1</property>
+				<property required="true" type="number">Duty Cycle 2</property>
+				<property required="true" type="number">Duty Cycle 3</property>
+			</properties>
+		</component>
+	</components>
+</root>

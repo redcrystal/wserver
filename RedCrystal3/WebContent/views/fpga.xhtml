@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<h:body>
+	<ui:composition template="/templates/template.xhtml">
+
+		<ui:define name="mainContent">
+			<h:form id="mainForm">
+				<style type="text/css">
+.customDataTable {
+	
+}
+
+.customDataTable .ui-state-default {
+	background-image: none;
+	background-color: #c2c2c2;
+	border: 1px solid gray;
+	color: black; /* #404040*/
+}
+</style>
+				<p:growl id="growl" showDetail="true" />
+				<p:tabView orientation="top" id="tabPanel">
+					<p:tab title="Send Data">
+						<p:panel id="sendFPGAPanel" style="border:none;">
+							<h:panelGrid columns="2">
+								<h:outputText value="Tx = " />
+								<p:inputTextarea rows="5" cols="80" value="#{fpgaController.tx}"
+									id="txdata"></p:inputTextarea>
+								<p:spacer height="10"></p:spacer>
+								<p:spacer height="10"></p:spacer>
+								<h:outputText value="Rx = " />
+								<h:outputText value="#{fpgaController.rx}" id="rxdata" />
+							</h:panelGrid>
+
+							<f:facet name="footer">
+								<p:commandButton value="Send" update="sendFPGAPanel"
+									process="sendFPGAPanel"
+									action="#{fpgaController.transferToFpga}"></p:commandButton>
+							</f:facet>
+						</p:panel>
+					</p:tab>
+
+					<p:tab title="Routing Table">
+						<p:panel id="routingTablePanel" style="border:none;">
+							<table>
+								<tr>
+									<td valign="top"><p:dataTable id="routingDataTable"
+											style="width:220px;" editable="true" editMode="cell"
+											scrollHeight="200"
+											value="#{fpgaController.routingDataTableModel}" var="routing">
+											<p:ajax event="cellEdit"
+												listener="#{fpgaController.onCellRoutingEdit}"
+												update=":mainForm:growl, routingDataTable">
+											</p:ajax>
+											<p:column width="40">
+												<f:facet name="header">
+													<h:outputText value="I/O" />
+												</f:facet>
+												<h:outputText value="#{routing.index}" />
+											</p:column>
+											<p:column width="70">
+												<f:facet name="header">
+													<h:outputText value="Address" />
+												</f:facet>
+												<h:outputText value="0x#{routing.addressInHexString}" />
+											</p:column>
+											<p:column width="60">
+												<f:facet name="header">
+													<h:outputText value="Value" />
+												</f:facet>
+												<p:cellEditor>
+													<f:facet name="output">
+														<h:outputText value="0x#{routing.valueInHexString}" />
+													</f:facet>
+													<f:facet name="input">
+														<h:outputText value="0x " />
+														<p:inputText id="valueRoutingInput"
+															value="#{routing.valueInHexString}" style="width:30px;" />
+													</f:facet>
+												</p:cellEditor>
+											</p:column>
+										</p:dataTable></td>
+									<td valign="top"><p:commandButton style="height:25px;"
+											update="routingDataTable" icon="ui-icon-refresh"
+											title="Refresh"
+											action="#{fpgaController.refreshRoutingTable()}">
+										</p:commandButton></td>
+								</tr>
+							</table>
+						</p:panel>
+					</p:tab>
+
+					<p:tab title="GPIO Controller">
+						<p:panel id="gpioTablePanel" style="border:none;">
+							<table>
+								<tr>
+									<td valign="top"><p:dataTable id="gpioDataTable"
+											style="width:220px;" editable="true" editMode="cell"
+											scrollHeight="200"
+											value="#{fpgaController.gpioDataTableModel}" var="gpio">
+											<p:ajax event="cellEdit"
+												listener="#{fpgaController.onGpioRegisterEdit}"
+												update=":mainForm:growl, gpioDataTable" />
+
+											<p:column width="40">
+												<f:facet name="header">
+													<h:outputText value="Index" />
+												</f:facet>
+												<h:outputText value="#{gpio.index}" />
+											</p:column>
+											<p:column width="70">
+												<f:facet name="header">
+													<h:outputText value="Address" />
+												</f:facet>
+												<h:outputText value="0x#{gpio.addressInHexString}" />
+											</p:column>
+											<p:column width="60">
+												<f:facet name="header">
+													<h:outputText value="Value" />
+												</f:facet>
+												<p:cellEditor>
+													<f:facet name="output">
+														<h:outputText value="0x#{gpio.valueInHexString}" />
+													</f:facet>
+													<f:facet name="input">
+														<h:outputText value="0x " />
+														<p:inputText id="valueGpioInput"
+															value="#{gpio.valueInHexString}" style="width:30px;" />
+													</f:facet>
+												</p:cellEditor>
+											</p:column>
+										</p:dataTable></td>
+									<td valign="top"><p:commandButton style="height:25px;"
+											update="gpioDataTable" icon="ui-icon-refresh" title="Refresh"
+											action="#{fpgaController.refreshGpioTable}">
+										</p:commandButton></td>
+								</tr>
+							</table>
+
+						</p:panel>
+					</p:tab>
+
+					<p:tab title="VMotor Block">
+						<p:panel id="motorTablePanel" style="border:none;">
+							<table>
+								<tr>
+									<td valign="top"><p:dataTable id="motorDataTable"
+											style="width:220px;" editable="true" editMode="cell"
+											scrollHeight="200"
+											value="#{fpgaController.motorDataTableModel}" var="motor">
+											<p:ajax event="cellEdit"
+												listener="#{fpgaController.onCellEditOfMotorTable}"
+												update=":mainForm:growl, motorDataTable" />
+
+											<p:column width="40">
+												<f:facet name="header">
+													<h:outputText value="Index" />
+												</f:facet>
+												<h:outputText value="#{motor.index}" />
+											</p:column>
+											<p:column width="70">
+												<f:facet name="header">
+													<h:outputText value="Address" />
+												</f:facet>
+												<h:outputText value="0x#{motor.addressInHexString}" />
+											</p:column>
+											<p:column width="60">
+												<f:facet name="header">
+													<h:outputText value="Value" />
+												</f:facet>
+												<p:cellEditor>
+													<f:facet name="output">
+														<h:outputText value="0x#{motor.valueInHexString}" />
+													</f:facet>
+													<f:facet name="input">
+														<h:outputText value="0x " />
+														<p:inputText id="valueMotorInput"
+															value="#{motor.valueInHexString}" style="width:30px;" />
+													</f:facet>
+												</p:cellEditor>
+											</p:column>
+										</p:dataTable></td>
+									<td valign="top" style="padding-left: 20px;"><p:dataGrid
+											columns="3" id="motorDevicesGrid" styleClass="customDataGrid"
+											value="#{fpgaController.motorDevicesTableModel}" var="device">
+											<p:panel style="width:220px;">
+												<f:facet name="header">
+													<h:outputText
+														value="#{device.name} (0x#{device.addressInHexString})" />
+												</f:facet>
+												<table>
+													<tr>
+														<td valign="top"><p:dataTable
+																value="#{device.registers}" var="register"
+																styleClass="customDataTable">
+																<p:column>
+																	<f:facet name="header">
+																		<h:outputText value="Index" />
+																	</f:facet>
+																	<h:outputText value="#{register.index}" />
+																</p:column>
+
+																<p:column headerText="Address">
+																	<h:outputText value="0x#{register.addressInHexString}" />
+																</p:column>
+
+																<p:column headerText="Value">
+																	<h:outputText value="0x#{register.valueInHexString}" />
+																</p:column>
+															</p:dataTable></td>
+														<td valign="top"><p:commandButton
+																oncomplete="motorDeviceEditDlg.show();"
+																update=":motorDeviceEditForm:motorDeviceEditDialog"
+																icon="ui-icon-pencil" style="height:25px;"
+																title="edit resgisters">
+																<f:setPropertyActionListener
+																	target="#{fpgaController.selectedDevice}"
+																	value="#{device}"></f:setPropertyActionListener>
+															</p:commandButton></td>
+													</tr>
+												</table>
+
+											</p:panel>
+										</p:dataGrid></td>
+
+									<td valign="top"><p:commandButton style="height:25px;"
+											update="motorDataTable, motorDevicesGrid" icon="ui-icon-refresh"
+											title="Refresh" action="#{fpgaController.refreshMotorTable}">
+										</p:commandButton></td>
+								</tr>
+							</table>
+
+						</p:panel>
+					</p:tab>
+
+					<p:tab title="VServo Block">
+						<p:panel id="servoTablePanel" style="border:none;">
+							<table>
+								<tr>
+									<td valign="top"><p:dataTable id="servoDataTable"
+											style="width:220px;" editable="true" editMode="cell"
+											scrollHeight="200"
+											value="#{fpgaController.servoDataTableModel}" var="servo">
+											<p:ajax event="cellEdit"
+												listener="#{fpgaController.onCellEditOfServoTable}"
+												update=":mainForm:growl, servoDataTable" />
+
+											<p:column width="40">
+												<f:facet name="header">
+													<h:outputText value="Index" />
+												</f:facet>
+												<h:outputText value="#{servo.index}" />
+											</p:column>
+											<p:column width="70">
+												<f:facet name="header">
+													<h:outputText value="Address" />
+												</f:facet>
+												<h:outputText value="0x#{servo.addressInHexString}" />
+											</p:column>
+											<p:column width="60">
+												<f:facet name="header">
+													<h:outputText value="Value" />
+												</f:facet>
+												<p:cellEditor>
+													<f:facet name="output">
+														<h:outputText value="0x#{servo.valueInHexString}" />
+													</f:facet>
+													<f:facet name="input">
+														<h:outputText value="0x " />
+														<p:inputText id="valueServoInput"
+															value="#{servo.valueInHexString}" style="width:30px;" />
+													</f:facet>
+												</p:cellEditor>
+											</p:column>
+										</p:dataTable></td>
+
+
+									<td valign="top" style="padding-left: 20px;"><p:dataGrid
+											columns="3" id="servoDevicesGrid" styleClass="customDataGrid"
+											value="#{fpgaController.servoDevicesTableModel}" var="device">
+											<p:panel style="width:220px;">
+												<f:facet name="header">
+													<h:outputText
+														value="#{device.name} (0x#{device.addressInHexString})" />
+												</f:facet>
+												<table>
+													<tr>
+														<td valign="top"><p:dataTable
+																value="#{device.registers}" var="register"
+																styleClass="customDataTable">
+																<p:column>
+																	<f:facet name="header">
+																		<h:outputText value="Index" />
+																	</f:facet>
+																	<h:outputText value="#{register.index}" />
+																</p:column>
+
+																<p:column headerText="Address">
+																	<h:outputText value="0x#{register.addressInHexString}" />
+																</p:column>
+
+																<p:column headerText="Value">
+																	<h:outputText value="0x#{register.valueInHexString}" />
+																</p:column>
+															</p:dataTable></td>
+														<td valign="top"><p:commandButton
+																oncomplete="servoDeviceEditDlg.show();"
+																update=":servoDeviceEditForm:servoDeviceEditDialog"
+																icon="ui-icon-pencil" style="height:25px;"
+																title="edit resgisters">
+																<f:setPropertyActionListener
+																	target="#{fpgaController.selectedDevice}"
+																	value="#{device}"></f:setPropertyActionListener>
+															</p:commandButton></td>
+													</tr>
+												</table>
+
+											</p:panel>
+										</p:dataGrid></td>
+
+									<td valign="top"><p:commandButton style="height:25px;"
+											update="servoDataTable, servoDevicesGrid"
+											icon="ui-icon-refresh" title="Refresh"
+											action="#{fpgaController.refreshServoTable}">
+										</p:commandButton></td>
+								</tr>
+							</table>
+						</p:panel>
+					</p:tab>
+				</p:tabView>
+			</h:form>
+
+			<h:form id="servoDeviceEditForm">
+				<p:dialog id="servoDeviceEditDialog" widgetVar="servoDeviceEditDlg"
+					height="180" width="280" showEffect="Blind" closeOnEscape="true"
+					position="center,center" modal="true">
+					<f:facet name="header">
+						<h:outputText
+							value="#{fpgaController.selectedDevice.name} - 0x#{fpgaController.selectedDevice.addressInHexString}" />
+					</f:facet>
+					<p:dataTable value="#{fpgaController.selectedDevice.registers}"
+						style="width:220px;" var="register">
+						<p:column headerText="Index" style="width:40px;">
+							<h:outputText value="#{register.index}" />
+						</p:column>
+						<p:column headerText="Address" width="50">
+							<h:outputText value="0x#{register.addressInHexString}" />
+						</p:column>
+						<p:column headerText="Value" width="60">
+							<h:outputText value="0x " />
+							<p:inputText style="width:30px;"
+								value="#{register.valueInHexString}"></p:inputText>
+						</p:column>
+
+					</p:dataTable>
+					<f:facet name="footer">
+						<p:commandButton value="Update" title="Update register value"
+							action="#{fpgaController.updateServoMotorRegisters()}"
+							update="@(#mainForm:tabPanel:servoDevicesGrid)"></p:commandButton>
+					</f:facet>
+				</p:dialog>
+			</h:form>
+			
+			<h:form id="motorDeviceEditForm">
+				<p:dialog id="motorDeviceEditDialog" widgetVar="motorDeviceEditDlg"
+					height="180" width="280" showEffect="Blind" closeOnEscape="true"
+					position="center,center" modal="true">
+					<f:facet name="header">
+						<h:outputText
+							value="#{fpgaController.selectedDevice.name} - 0x#{fpgaController.selectedDevice.addressInHexString}" />
+					</f:facet>
+					<p:dataTable value="#{fpgaController.selectedDevice.registers}"
+						style="width:220px;" var="register">
+						<p:column headerText="Index" style="width:40px;">
+							<h:outputText value="#{register.index}" />
+						</p:column>
+						<p:column headerText="Address" width="50">
+							<h:outputText value="0x#{register.addressInHexString}" />
+						</p:column>
+						<p:column headerText="Value" width="60">
+							<h:outputText value="0x " />
+							<p:inputText style="width:30px;"
+								value="#{register.valueInHexString}"></p:inputText>
+						</p:column>
+
+					</p:dataTable>
+					<f:facet name="footer">
+						<p:commandButton value="Update" title="Update register value"
+							action="#{fpgaController.updateServoMotorRegisters()}"
+							update="@(#mainForm:tabPanel:motorDevicesGrid)"></p:commandButton>
+					</f:facet>
+				</p:dialog>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<f:view contentType="text/html">
+	<h:head>
+		<title>RedScrystal</title>
+		<f:facet name="first">
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+			<meta http-equiv="pragma" content="no-cache" />
+			<meta http-equiv="cache-control" content="no-cache" />
+			<meta http-equiv="expires" content="0" />
+		</f:facet>
+		<!-- <link rel="SHORTCUT ICON" href="#{request.contextPath}/favicon.ico" /> -->
+		<h:outputStylesheet library="css" name="style.css" />
+	</h:head>
+	<h:body>
+		<f:facet name="last">
+			<h:outputStylesheet library="css" name="global.css" />
+		</f:facet>
+		<ui:insert name="ajaxErrorHandler">
+			<!-- Enable ajaxErrorHandler -->
+
+			<pe:ajaxErrorHandler button="Close warning!">
+				<f:facet name="title">  
+       				 Error <span style="color: red;">{error-name}</span>
+				</f:facet>
+				<f:facet name="body">
+					<div>
+						<h:form>
+							<p:tabView>
+								<p:tab title="Message">
+									<h:panelGrid columns="2">
+										<h:outputLabel value="Error message:" />
+										<h:outputText value="{error-message}"
+											style="font-size: 1.2em;color:navy;" />
+
+										<h:outputLabel value="Server name:" />
+										<h:outputText value="{error-hostname}"
+											style="font-size: 1.2em;color:navy;" />
+									</h:panelGrid>
+
+								</p:tab>
+								<p:tab title="Detail">
+									<div style="overflow: auto; height: 300px; width: 700px;">
+										{error-stacktrace}</div>
+								</p:tab>
+							</p:tabView>
+						</h:form>
+					</div>
+				</f:facet>
+			</pe:ajaxErrorHandler>
+
+			<pe:ajaxErrorHandler
+				type="javax.faces.application.ViewExpiredException" button="Reload"
+				buttonOnclick="document.location.href=document.location.href;" />
+
+			<pe:ajaxErrorHandler type="javax.servlet.ServletException"
+				button="Reload"
+				buttonOnclick="document.location.href=document.location.href;" />
+
+		</ui:insert>
+
+		<div id="contentWrapper">
+			<div class="header-bar">
+				<div class="navbar">
+					<ul class="nav">
+						<li class="active"><h:graphicImage name="Red-Crystal-Logo-White.png" height="16" style="padding-top:12px;" 
+								library="images" /></li>
+						<li ><a href="#{request.contextPath}/views/design.jsf">Design</a></li>
+						<li class="divider-vertical"></li>
+						<li><a href="#{request.contextPath}/views/fpga.jsf">FPGA</a></li>
+						<li class="divider-vertical"></li>
+						<li><a href="#{request.contextPath}/views/arduino.jsf">Arduino</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="loginPanelWrapper">
+				<div class="loginPanel">
+					<div class="loginPanelLeft">
+						<h:form id="themeForm" prependId="false" rendered="false">
+							<h:panelGrid columns="2" styleClass="themeRoller"
+								columnClasses="themeText,themeSelect">
+								<h:outputText value="Theme: " />
+								<p:selectOneMenu id="themeSelectMenu"
+									value="#{userProperty.currentTheme}" var="theme" effect="drop"
+									onchange="$('#themeForm').submit()">
+									<f:converter converterId="themeConverter" />
+									<f:selectItems var="t" value="#{userProperty.availableThemes}"
+										itemLabel="#{t.name}" itemValue="#{t}" />
+									<p:column>
+										<p:graphicImage value="#{theme.image}"
+											rendered="${not empty theme.image}" />
+									</p:column>
+									<p:column>
+										<h:outputText value="#{theme.name}" />
+									</p:column>
+								</p:selectOneMenu>
+							</h:panelGrid>
+						</h:form>
+					</div>
+					<div class="loginPanelRight">
+						<h:form id="logoutForm" prependId="false">
+							<ul class="loginList">
+								<li class="button"><p:commandLink value="Sign out"
+										style="color:#666666;font-size:12px;font-weight:normal; text-decoration: none;"
+										actionListener="#{loginController.signOut}" ajax="false"></p:commandLink>
+								</li>
+								<li class="separator"></li>
+								<li class="link"><a>About</a></li>
+								<li class="separator"></li>
+								<li class="link"><a>Home Page</a></li>
+								<li class="social"><h:graphicImage name="fb.png"
+										library="images" width="20" height="20" /></li>
+							</ul>
+						</h:form>
+					</div>
+				</div>
+			</div>
+
+			<div class="mainContent">
+				<ui:insert name="mainContent"></ui:insert>
+			</div>
+		</div>
+
+		<h:outputScript id="dynaFormScript" target="body">  
+/* <![CDATA[ */ 
+   $(window).scroll(function() {
+
+    if ($(window).scrollTop() >= 40) {
+        $('div.loginPanelWrapper').addClass('fixed-element');
+    } else if ($(window).scrollTop() < 40) {
+        $('div.loginPanelWrapper').removeClass('fixed-element');
+    }
+
+});
+
+/* ]]> */  
+</h:outputScript>
+
+		<p:ajaxStatus
+			style="width:64px;height:64px;position:fixed;right:10px;bottom:5px">
+			<f:facet name="start">
+				<p:graphicImage value="/resources/images/ajax_loader_blue_48.gif" />
+			</f:facet>
+			<f:facet name="complete">
+				<h:outputText value="" />
+			</f:facet>
+		</p:ajaxStatus>
+	</h:body>
+</f:view>
+</html>
