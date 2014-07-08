@@ -11,7 +11,7 @@ import de.redcrystal.webapp.model.fpga.FpgaDevice;
 
 /**
  * the fpga device table model
- * @author mngo
+ * @author Tran
  *
  */
 public class FpgaDeviceTableModel extends ListDataModel<FpgaDevice> implements SelectableDataModel<FpgaDevice>, Serializable{

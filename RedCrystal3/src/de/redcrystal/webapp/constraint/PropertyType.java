@@ -6,7 +6,7 @@ package de.redcrystal.webapp.constraint;
 /**
  * the propterty type class
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class PropertyType {

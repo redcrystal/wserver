@@ -17,7 +17,7 @@ import de.redcrystal.webapp.constraint.PropertyType;
 /**
  * the component property
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class ComponentProperty implements Serializable {

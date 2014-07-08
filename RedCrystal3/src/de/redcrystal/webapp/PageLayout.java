@@ -13,7 +13,7 @@ import org.primefaces.extensions.model.layout.LayoutOptions;
  * 
  * to define page layout properties
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 @ApplicationScoped

@@ -24,7 +24,7 @@ import java.util.List;
  * 
  * VSERVO_7(0xC7); end of virtual motor definition
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class VServoDevices {

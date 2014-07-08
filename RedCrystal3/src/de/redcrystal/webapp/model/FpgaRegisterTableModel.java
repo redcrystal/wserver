@@ -15,7 +15,7 @@ import de.redcrystal.webapp.model.fpga.FpgaRegister;
 /**
  * the routing table model
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class FpgaRegisterTableModel extends ListDataModel<FpgaRegister> implements SelectableDataModel<FpgaRegister>, Serializable {

@@ -22,7 +22,7 @@ import de.redcrystal.webapp.util.Utilities;
 /**
  * the life cycle listener
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class LifeCycleListener implements PhaseListener {

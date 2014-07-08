@@ -14,7 +14,7 @@ import de.redcrystal.webapp.model.system.Theme;
 /**
  * the them converter
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 @FacesConverter("themeConverter")

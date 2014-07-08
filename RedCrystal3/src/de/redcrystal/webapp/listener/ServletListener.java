@@ -12,7 +12,7 @@ import java.lang.reflect.Method;
 /**
  * Servlet listener
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class ServletListener implements ServletContextListener {

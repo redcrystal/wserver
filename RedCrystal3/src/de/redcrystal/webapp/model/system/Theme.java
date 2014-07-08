@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class Theme implements Serializable {

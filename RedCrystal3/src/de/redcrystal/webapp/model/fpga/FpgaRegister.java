@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * a FPGA cell
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class FpgaRegister implements Serializable {

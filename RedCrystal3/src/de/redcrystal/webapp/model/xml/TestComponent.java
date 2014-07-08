@@ -17,7 +17,7 @@ import org.junit.Test;
 /**
  * to test class component
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class TestComponent {

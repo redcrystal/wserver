@@ -5,7 +5,7 @@ import org.junit.Test;
 
 /**
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class UtilitiesTest {

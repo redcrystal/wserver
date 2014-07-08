@@ -6,7 +6,7 @@ package de.redcrystal.webapp;
 /**
  * the constant class
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class Constants {

@@ -17,7 +17,7 @@ import de.redcrystal.webapp.model.xml.ComponentProperty;
 /**
  * the form property for dyna form
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class FormProperty implements Serializable {

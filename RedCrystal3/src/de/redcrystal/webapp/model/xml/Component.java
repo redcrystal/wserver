@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlTransient;
 /**
  * the component class
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 @XmlRootElement(name = "component")

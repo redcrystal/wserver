@@ -30,7 +30,7 @@ import de.redcrystal.webapp.model.fpga.VServoDevices;
 /**
  * the controller for the page spitest.xhtml
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 @ManagedBean

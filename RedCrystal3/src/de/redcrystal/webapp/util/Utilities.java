@@ -16,7 +16,7 @@ import de.redcrystal.webapp.UserProperty;
 /**
  * the utilities class
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class Utilities {

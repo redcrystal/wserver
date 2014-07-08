@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * list of all available themes
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class AvailableThemes {

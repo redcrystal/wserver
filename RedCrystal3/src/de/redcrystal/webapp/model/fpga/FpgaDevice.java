@@ -8,7 +8,7 @@ import java.util.List;
  * <br/>
  * one device consist of multiple register
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class FpgaDevice implements Serializable {

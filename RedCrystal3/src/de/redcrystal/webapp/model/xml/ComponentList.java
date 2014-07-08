@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * the component list
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 @XmlRootElement(name = "root")

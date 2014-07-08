@@ -20,7 +20,7 @@ import org.junit.Test;
 /**
  * to test the class {@link ComponentList}
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class TestComponentList {

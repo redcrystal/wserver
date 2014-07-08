@@ -27,7 +27,7 @@ import de.redcrystal.webapp.util.Utilities;
  * 
  * login page controller
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 @ManagedBean

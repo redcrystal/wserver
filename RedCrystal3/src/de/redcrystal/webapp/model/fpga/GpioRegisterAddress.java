@@ -6,7 +6,7 @@ package de.redcrystal.webapp.model.fpga;
 /**
  * the GPIO controller definition
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class GpioRegisterAddress {

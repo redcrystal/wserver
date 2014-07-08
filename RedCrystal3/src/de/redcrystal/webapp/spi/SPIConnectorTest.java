@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * JUnit tests for {@link SPIConnector}
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class SPIConnectorTest {

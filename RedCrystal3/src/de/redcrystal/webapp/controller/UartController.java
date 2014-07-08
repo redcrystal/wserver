@@ -23,7 +23,7 @@ import de.redcrystal.communication.*;
 /**
  * the controller for the page spitest.xhtml
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 @ManagedBean

@@ -36,7 +36,7 @@ import de.redcrystal.webapp.util.Utilities;
 /**
  * the controller class for page circuit design
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 @ManagedBean

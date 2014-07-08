@@ -1,13 +1,8 @@
 package de.redcrystal.jni;
-
-import org.jwebsocket.console.JWebSocketEmbedded;
-
-import static org.jwebsocket.console.JWebSocketEmbedded.*;
-
 /**
  * SPI JNI: Java class based on c code to connect SPI driver
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class SpiJni {

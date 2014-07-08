@@ -3,7 +3,7 @@ package de.redcrystal.webapp.model.fpga;
 /**
  * the device address
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public enum FpgaDeviceAddress {

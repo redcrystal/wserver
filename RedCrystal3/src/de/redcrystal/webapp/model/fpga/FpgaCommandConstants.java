@@ -6,7 +6,7 @@ package de.redcrystal.webapp.model.fpga;
 /**
  * the FPGA command
  * 
- * @author mngo
+ * @author Tran
  *
  */
 public class FpgaCommandConstants {

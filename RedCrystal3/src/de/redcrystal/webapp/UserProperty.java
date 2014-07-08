@@ -16,7 +16,7 @@ import de.redcrystal.webapp.util.Utilities;
 /**
  * the user property
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 @ManagedBean(name = "userProperty")

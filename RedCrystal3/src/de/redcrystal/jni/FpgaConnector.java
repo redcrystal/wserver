@@ -12,7 +12,7 @@ import de.redcrystal.webapp.model.fpga.GpioRegisterAddress;
 
 /**
  * 
- * @author mngo
+ * @author Tran
  * 
  */
 public class FpgaConnector {
